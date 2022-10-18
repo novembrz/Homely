@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State private var selectedTab: Tab = .house
+    @State private var selectedTab: Tab = .home
     
     init() {
         UITabBar.appearance().isHidden = true
@@ -35,7 +35,7 @@ struct TabBarView: View {
     @ViewBuilder
     private func CurrentView() -> some View {
         switch selectedTab {
-        case .house:
+        case .home:
             HomeView()
         case .family:
             FamilyView()

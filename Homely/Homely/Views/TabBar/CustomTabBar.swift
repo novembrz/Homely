@@ -8,8 +8,8 @@
 import SwiftUI
 
 enum Tab: String, CaseIterable {
-    case house
-    case family = "person.2" // person.3
+    case home = "house"
+    case family = "person.2"
     case person = "face.smiling"
 }
 
@@ -22,12 +22,12 @@ struct CustomTabBar: View {
     
     private var tabColor: Color {
         switch selectedTab {
-        case .house:
-            return .cyan
+        case .home:
+            return .homeColor()
         case .family:
-            return .purple
+            return .familyColor()
         case .person:
-            return .pink
+            return .personColor()
         }
     }
     
