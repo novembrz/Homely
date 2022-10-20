@@ -2,24 +2,18 @@
 //  HomeView.swift
 //  Homely
 //
-//  Created by Kurilova Daria Kirillovna on 18.10.2022.
+//  Created by Kurilova Daria Kirillovna on 20.10.2022.
 //
 
 import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .font(.bold(30))
-                .padding()
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-//MARK: - Previews
-
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }

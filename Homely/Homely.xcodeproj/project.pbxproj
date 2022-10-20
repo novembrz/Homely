@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87D573512901B964003FC8B4 /* SimpleToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573502901B964003FC8B4 /* SimpleToggleView.swift */; };
+		87D573532901C2A3003FC8B4 /* TitleToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573522901C2A3003FC8B4 /* TitleToggle.swift */; };
+		87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573572901CA2D003FC8B4 /* HomeView.swift */; };
 		87DAA36B28FEE5B700E305E3 /* HomelyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAA36A28FEE5B700E305E3 /* HomelyApp.swift */; };
-		87DAA36D28FEE5B700E305E3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAA36C28FEE5B700E305E3 /* HomeView.swift */; };
 		87DAA36F28FEE5B700E305E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DAA36E28FEE5B700E305E3 /* Assets.xcassets */; };
 		87DAA37228FEE5B700E305E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DAA37128FEE5B700E305E3 /* Preview Assets.xcassets */; };
 		87DAA37B28FEE5E800E305E3 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAA37A28FEE5E700E305E3 /* TabBarView.swift */; };
@@ -29,9 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87D573502901B964003FC8B4 /* SimpleToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleToggleView.swift; sourceTree = "<group>"; };
+		87D573522901C2A3003FC8B4 /* TitleToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleToggle.swift; sourceTree = "<group>"; };
+		87D573572901CA2D003FC8B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		87DAA36728FEE5B700E305E3 /* Homely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DAA36A28FEE5B700E305E3 /* HomelyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomelyApp.swift; sourceTree = "<group>"; };
-		87DAA36C28FEE5B700E305E3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		87DAA36E28FEE5B700E305E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87DAA37128FEE5B700E305E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		87DAA37A28FEE5E700E305E3 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87D5734F2901B93C003FC8B4 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				87D573502901B964003FC8B4 /* SimpleToggleView.swift */,
+				87D573522901C2A3003FC8B4 /* TitleToggle.swift */,
+			);
+			path = "Common Views";
+			sourceTree = "<group>";
+		};
 		87DAA35E28FEE5B700E305E3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,9 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				87DAA37928FEE5DA00E305E3 /* TabBar */,
-				87DAA36C28FEE5B700E305E3 /* HomeView.swift */,
+				87D573572901CA2D003FC8B4 /* HomeView.swift */,
 				87DAA38228FEE74000E305E3 /* FamilyView.swift */,
 				87DAA38428FEE75300E305E3 /* PersonView.swift */,
+				87D5734F2901B93C003FC8B4 /* Common Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,10 +250,12 @@
 				87DAA39F28FF000000E305E3 /* Font + Extension.swift in Sources */,
 				87DAA38328FEE74000E305E3 /* FamilyView.swift in Sources */,
 				87DAA38828FEEB8300E305E3 /* Color + Extension.swift in Sources */,
+				87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */,
 				87DAA37D28FEE69300E305E3 /* CustomTabBar.swift in Sources */,
-				87DAA36D28FEE5B700E305E3 /* HomeView.swift in Sources */,
 				87DAA38528FEE75300E305E3 /* PersonView.swift in Sources */,
+				87D573512901B964003FC8B4 /* SimpleToggleView.swift in Sources */,
 				87DAA37B28FEE5E800E305E3 /* TabBarView.swift in Sources */,
+				87D573532901C2A3003FC8B4 /* TitleToggle.swift in Sources */,
 				87DAA36B28FEE5B700E305E3 /* HomelyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

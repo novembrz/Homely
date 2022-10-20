@@ -10,25 +10,40 @@ import SwiftUI
 struct TabBarView: View {
     @State private var selectedTab: Tab = .home
     
+    private var navigationTitle: String {
+        switch selectedTab {
+        case .home:
+            return "Дом"
+        case .family:
+            return "Семья"
+        case .person:
+            return "Личное"
+        }
+    }
+    
     init() {
         UITabBar.appearance().isHidden = true
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "Montserrat-Bold", size: 35)!]
     }
     
     var body: some View {
-        ZStack {
-            VStack {
-                TabView(selection: $selectedTab) {
-                    ForEach(Tab.allCases, id: \.rawValue) { tab in
-                        CurrentView()
-                            .tag(tab)
+        NavigationView {
+            ZStack {
+                VStack {
+                    TabView(selection: $selectedTab) {
+                        ForEach(Tab.allCases, id: \.rawValue) { tab in
+                            CurrentView()
+                                .tag(tab)
+                        }
                     }
                 }
+                
+                VStack {
+                    Spacer()
+                    CustomTabBar(selectedTab: $selectedTab)
+                }
             }
-            
-            VStack {
-                Spacer()
-                CustomTabBar(selectedTab: $selectedTab)
-            }
+            .navigationBarTitle(Text(navigationTitle).font(.subheadline), displayMode: .large)
         }
     }
     

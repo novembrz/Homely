@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Color {
-    
     static func homeColor() -> Color {
         return Color("HomeColor")
     }
@@ -19,5 +18,21 @@ extension Color {
     
     static func personColor() -> Color {
         return Color("PersonColor")
+    }
+    
+    static func backgroundColor() -> Color {
+        return Color("BgColor")
+    }
+    
+    static func elementColor() -> Color {
+        return Color("ElementColor")
+    }
+    
+    static func secondaryColor() -> Color {
+        return Color("SecondaryColor")
+    }
+    
+    static func textColor() -> Color {
+        return Color("TextColor")
     }
 }
