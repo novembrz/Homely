@@ -9,6 +9,10 @@ import SwiftUI
 
 extension Image {
     
+    static func shadow() -> Image {
+        return Image("shadow")
+    }
+    
     struct Illustration {
         static func car() -> Image {
             return Image("car")

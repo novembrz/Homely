@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct SimpleToggleView: View {
-    
-    @State private var showGreeting = false
-    
     var title: String
     var tint: Color
     var onAction: (() -> ())
     var offAction: (() -> ())
     
+    @State private var startAction = false
+    
     var body: some View {
         VStack {
-            Toggle(isOn: $showGreeting) {
+            Toggle(isOn: $startAction) {
                 Text(title)
                     .font(.regular(.textSize))
                     .foregroundColor(.textColor())
@@ -28,8 +27,8 @@ struct SimpleToggleView: View {
         .padding(.padding)
         .background(Color.backgroundColor())
         .cornerRadius(.radius)
-        .onChange(of: showGreeting) { newValue in
-            if showGreeting {
+        .onChange(of: startAction) { newValue in
+            if startAction {
                 onAction()
             } else {
                 offAction()

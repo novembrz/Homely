@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct TitleToggle: View {
-    
-    @State private var showGreeting = false
-    
     var title: String
     var textSize: CGFloat = 12
     var tint: Color
     var onAction: (() -> ())
     var offAction: (() -> ())
+    
+    @State private var startAction = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -23,12 +22,12 @@ struct TitleToggle: View {
                 .font(.regular(textSize))
                 .foregroundColor(.textColor())
 
-            Toggle("", isOn: $showGreeting)
+            Toggle("", isOn: $startAction)
                 .labelsHidden()
                 .tint(tint)
         }
-        .onChange(of: showGreeting) { newValue in
-            if showGreeting {
+        .onChange(of: startAction) { newValue in
+            if startAction {
                 onAction()
             } else {
                 offAction()
