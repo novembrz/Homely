@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871C03212901D42D007DE240 /* Image + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C03202901D42D007DE240 /* Image + Extension.swift */; };
 		87D573512901B964003FC8B4 /* SimpleToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573502901B964003FC8B4 /* SimpleToggleView.swift */; };
 		87D573532901C2A3003FC8B4 /* TitleToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573522901C2A3003FC8B4 /* TitleToggle.swift */; };
 		87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573572901CA2D003FC8B4 /* HomeView.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871C03202901D42D007DE240 /* Image + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Extension.swift"; sourceTree = "<group>"; };
 		87D573502901B964003FC8B4 /* SimpleToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleToggleView.swift; sourceTree = "<group>"; };
 		87D573522901C2A3003FC8B4 /* TitleToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleToggle.swift; sourceTree = "<group>"; };
 		87D573572901CA2D003FC8B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				87DAA38728FEEB8300E305E3 /* Color + Extension.swift */,
 				87DAA39E28FF000000E305E3 /* Font + Extension.swift */,
+				871C03202901D42D007DE240 /* Image + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				87DAA39F28FF000000E305E3 /* Font + Extension.swift in Sources */,
 				87DAA38328FEE74000E305E3 /* FamilyView.swift in Sources */,
 				87DAA38828FEEB8300E305E3 /* Color + Extension.swift in Sources */,
+				871C03212901D42D007DE240 /* Image + Extension.swift in Sources */,
 				87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */,
 				87DAA37D28FEE69300E305E3 /* CustomTabBar.swift in Sources */,
 				87DAA38528FEE75300E305E3 /* PersonView.swift in Sources */,
