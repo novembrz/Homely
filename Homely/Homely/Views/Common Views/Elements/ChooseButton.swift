@@ -13,11 +13,14 @@ struct ChooseButton: View {
     var onAction: (() -> ())
     var offAction: (() -> ())
     
-    @State private var startAction = true
+    @State private var startAction = false
     
     var body: some View {
         Button {
-            
+            withAnimation {
+                startAction.toggle()
+                startAction ? onAction() : offAction()
+            }
         } label: {
             ZStack {
                 icon
