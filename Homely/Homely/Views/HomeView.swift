@@ -7,14 +7,18 @@
 
 import SwiftUI
 
+//PIZDEC DLA IPAD - Посмотри видосы из заметок
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("")
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        MainView()
+        
+        MainView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

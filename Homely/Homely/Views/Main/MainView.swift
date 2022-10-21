@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabBarView: View {
+struct MainView: View {
     @State private var selectedTab: Tab = .home
     
     private var navigationTitle: String {
@@ -64,7 +64,7 @@ struct TabBarView: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        MainView()
     }
 }
 
