@@ -11,9 +11,9 @@ struct WeatherView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             HStack {
-                VStack(alignment: .leading, spacing: 12) {
-                    inHomeInfoView(title: "24°", subtitle: "в доме")
-                    inHomeInfoView(title: "74%", subtitle: "влажность")
+                VStack(alignment: .leading, spacing: .inHomeInfoSpacing) {
+                    inHomeInfoView(title: "24°", subtitle: .home)
+                    inHomeInfoView(title: "74%", subtitle: .humidity)
                 }
                 
                 Spacer()
@@ -21,15 +21,15 @@ struct WeatherView: View {
                 VStack {
                     Spacer()
                     
-                    HStack(spacing: 11) {
+                    HStack(spacing: .wheaterInfoSpacing) {
                         wheaterInfoView(temp: "12°", icon: .Icon.sun())
                         wheaterInfoView(temp: "5°", icon: .Icon.moon())
                     }
                 }
             }
-            .padding(.vertical, 16)
-            .padding(.horizontal, 14)
-            .frame(width: 198, height: 109)
+            .padding(.vertical, .verticalPadding)
+            .padding(.horizontal, .horizontalPadding)
+            .frame(height: .heigth)
             .background(Color.backgroundColor())
             .cornerRadius(.CommonSize.cornerRadius)
             
@@ -44,11 +44,11 @@ struct WeatherView: View {
     func inHomeInfoView(title: String, subtitle: String) -> some View {
         VStack(alignment: .leading, spacing: -2) {
             Text(title)
-                .font(.bold(18))
+                .font(.bold(.titleSize))
                 .foregroundColor(.textColor())
             
             Text(subtitle)
-                .font(.regular(12))
+                .font(.regular(.subtitleSize))
                 .foregroundColor(.textColor())
         }
     }
@@ -57,15 +57,14 @@ struct WeatherView: View {
     
     @ViewBuilder
     func wheaterInfoView(temp: String, icon: Image) -> some View {
-        HStack(spacing: 2) {
+        HStack(spacing: .wheaterItemSpacing) {
             icon
                 .resizable()
-                .frame(width: 13, height: 13)
-                .font(.system(size: 13, weight: .bold))
+                .frame(width: .iconSize, height: .iconSize)
                 .foregroundColor(.textColor())
             
             Text(temp)
-                .font(.bold(13))
+                .font(.bold(.wheaterTextSize))
                 .foregroundColor(.textColor())
         }
     }
@@ -73,8 +72,23 @@ struct WeatherView: View {
 
 //MARK: - Extensions
 
+private extension String {
+    static var home = "в доме"
+    static var humidity = "влажность"
+}
+
 private extension CGFloat {
-    
+    static var verticalPadding: CGFloat = 16
+    static var horizontalPadding: CGFloat = 14
+    static var width: CGFloat = 198
+    static var heigth: CGFloat = 109
+    static var inHomeInfoSpacing: CGFloat = 12
+    static var wheaterInfoSpacing: CGFloat = 11
+    static var wheaterItemSpacing: CGFloat = 2
+    static var iconSize: CGFloat = 13
+    static var wheaterTextSize: CGFloat = 13
+    static var titleSize: CGFloat = 18
+    static var subtitleSize: CGFloat = 12
 }
 
 //MARK: - Previews

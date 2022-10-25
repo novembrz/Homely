@@ -10,5 +10,6 @@ import SwiftUI
 extension CGFloat {
     struct CommonSize {
         static var cornerRadius: CGFloat = 9
+        static var spacing: CGFloat = 12
     }
 }

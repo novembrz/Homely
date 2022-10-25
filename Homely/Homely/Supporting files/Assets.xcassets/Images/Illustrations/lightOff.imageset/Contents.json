@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "LightOff.png",
+      "filename" : "LightOn w2-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "DarkOff.png",
+      "filename" : "LightOn-1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },

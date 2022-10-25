@@ -13,27 +13,28 @@ struct HomeView: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack {
+            VStack(spacing: .CommonSize.spacing) {
                 firstRow
             }
+            .padding(.horizontal, .CommonSize.spacing)
         }
     }
 
     var firstRow: some View {
-        HStack {
-            VStack {
+        HStack(spacing: .CommonSize.spacing) {
+            VStack(spacing: .CommonSize.spacing) {
                 WeatherView()
                 
-                HStack {
+                HStack(spacing: .CommonSize.spacing) {
                     IconTitleToggleView(
-                        title: "Кондиционер",
+                        title: .conditioner,
                         icon: .Icon.fan(),
                         tint: .homeColor()) { action in
                             viewModel.conditionerAction(action)
                         }
                     
                     IconTitleToggleView(
-                        title: "Увлажнитель",
+                        title: .humidifier,
                         icon: .Icon.drop(),
                         tint: .homeColor()) { action in
                             viewModel.conditionerAction(action)
@@ -41,10 +42,21 @@ struct HomeView: View {
                 }
             }
             
-            //LightView()
+            LightView { action in
+                viewModel.conditionerAction(action)
+            }
         }
     }
 }
+
+//MARK: - Extensions
+
+private extension String {
+    static var conditioner = "Кондиционер"
+    static var humidifier = "Увлажнитель"
+}
+
+//MARK: - Previews
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
