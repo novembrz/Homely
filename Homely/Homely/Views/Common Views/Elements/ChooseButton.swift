@@ -10,8 +10,7 @@ import SwiftUI
 struct ChooseButton: View {
     var icon: Image
     var tint: Color
-    var onAction: (() -> ())
-    var offAction: (() -> ())
+    var completion: ((Bool) -> ())
     
     @State private var startAction = false
     
@@ -19,7 +18,7 @@ struct ChooseButton: View {
         Button {
             withAnimation {
                 startAction.toggle()
-                startAction ? onAction() : offAction()
+                completion(startAction)
             }
         } label: {
             ZStack {
@@ -29,7 +28,7 @@ struct ChooseButton: View {
                     .foregroundColor(startAction ? .white : .textColor())
                     .padding(.padding)
                     .background(startAction ? tint : Color.backgroundColor())
-                    .cornerRadius(.radius)
+                    .cornerRadius(.CommonSize.cornerRadius)
                 
                 if startAction {
                     Image.shadow()
@@ -42,18 +41,6 @@ struct ChooseButton: View {
     }
 }
 
-//MARK: - Previews
-
-struct ButtonToggle_Previews: PreviewProvider {
-    static var previews: some View {
-        ChooseButton(icon: Image.Icon.livingRoom(), tint: .homeColor()) {
-            print("💚 SimpleToggleView")
-        } offAction: {
-            print("💔 SimpleToggleView")
-        }
-    }
-}
-
 //MARK: - Extensions
 
 private extension Double {
@@ -62,8 +49,14 @@ private extension Double {
 
 private extension CGFloat {
     static let padding: CGFloat = 10
-    static let radius: CGFloat = 9
     static let iconSize: CGFloat = 17
     static let shadowSize: CGFloat = 37
 }
 
+//MARK: - Previews
+
+struct ButtonToggle_Previews: PreviewProvider {
+    static var previews: some View {
+        ChooseButton(icon: Image.Icon.livingRoom(), tint: .homeColor()) { _ in }
+    }
+}

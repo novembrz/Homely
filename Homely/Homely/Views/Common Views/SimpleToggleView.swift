@@ -10,8 +10,7 @@ import SwiftUI
 struct SimpleToggleView: View {
     var title: String
     var tint: Color
-    var onAction: (() -> ())
-    var offAction: (() -> ())
+    var completion: ((Bool) -> ())
     
     @State private var startAction = false
     
@@ -26,25 +25,9 @@ struct SimpleToggleView: View {
         }
         .padding(.padding)
         .background(Color.backgroundColor())
-        .cornerRadius(.radius)
+        .cornerRadius(.CommonSize.cornerRadius)
         .onChange(of: startAction) { newValue in
-            if startAction {
-                onAction()
-            } else {
-                offAction()
-            }
-        }
-    }
-}
-
-//MARK: - Previews
-
-struct SimpleToggleView_Previews: PreviewProvider {
-    static var previews: some View {
-        SimpleToggleView(title: "Пылесос", tint: .homeColor()) {
-            print("💚 SimpleToggleView")
-        } offAction: {
-            print("💔 SimpleToggleView")
+            completion(startAction)
         }
     }
 }
@@ -53,6 +36,13 @@ struct SimpleToggleView_Previews: PreviewProvider {
 
 private extension CGFloat {
     static let padding: CGFloat = 10
-    static let radius: CGFloat = 9
     static let textSize: CGFloat = 12
+}
+
+//MARK: - Previews
+
+struct SimpleToggleView_Previews: PreviewProvider {
+    static var previews: some View {
+        SimpleToggleView(title: "Пылесос", tint: .homeColor()) { _ in }
+    }
 }

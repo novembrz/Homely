@@ -9,9 +9,16 @@
 /* Begin PBXBuildFile section */
 		871C03212901D42D007DE240 /* Image + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C03202901D42D007DE240 /* Image + Extension.swift */; };
 		871C03232901D7ED007DE240 /* ChooseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871C03222901D7ED007DE240 /* ChooseButton.swift */; };
-		877158642902B3EE00887794 /* IconToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877158632902B3EE00887794 /* IconToggle.swift */; };
+		875C4B492907E5300059402A /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C4B482907E5300059402A /* LightView.swift */; };
+		875C4B4B2907E7AA0059402A /* CommonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C4B4A2907E7AA0059402A /* CommonSize.swift */; };
+		877158642902B3EE00887794 /* PowerToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877158632902B3EE00887794 /* PowerToggleStyle.swift */; };
+		87D1A1E42902CE650079C437 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1E32902CE650079C437 /* HomeViewModel.swift */; };
+		87D1A1EB2902DB340079C437 /* IconTitleToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */; };
+		87D1A1ED2902FEC60079C437 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EC2902FEC60079C437 /* HexColor.swift */; };
+		87D1A1EF290463E90079C437 /* CheckToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EE290463E90079C437 /* CheckToggleStyle.swift */; };
+		87D1A1F1290469700079C437 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1F0290469700079C437 /* WeatherView.swift */; };
 		87D573512901B964003FC8B4 /* SimpleToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573502901B964003FC8B4 /* SimpleToggleView.swift */; };
-		87D573532901C2A3003FC8B4 /* TitleToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573522901C2A3003FC8B4 /* TitleToggle.swift */; };
+		87D573532901C2A3003FC8B4 /* VerticalTitleToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573522901C2A3003FC8B4 /* VerticalTitleToggle.swift */; };
 		87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D573572901CA2D003FC8B4 /* HomeView.swift */; };
 		87DAA36B28FEE5B700E305E3 /* HomelyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DAA36A28FEE5B700E305E3 /* HomelyApp.swift */; };
 		87DAA36F28FEE5B700E305E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DAA36E28FEE5B700E305E3 /* Assets.xcassets */; };
@@ -36,9 +43,16 @@
 /* Begin PBXFileReference section */
 		871C03202901D42D007DE240 /* Image + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Extension.swift"; sourceTree = "<group>"; };
 		871C03222901D7ED007DE240 /* ChooseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseButton.swift; sourceTree = "<group>"; };
-		877158632902B3EE00887794 /* IconToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconToggle.swift; sourceTree = "<group>"; };
+		875C4B482907E5300059402A /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
+		875C4B4A2907E7AA0059402A /* CommonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonSize.swift; sourceTree = "<group>"; };
+		877158632902B3EE00887794 /* PowerToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerToggleStyle.swift; sourceTree = "<group>"; };
+		87D1A1E32902CE650079C437 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleToggleView.swift; sourceTree = "<group>"; };
+		87D1A1EC2902FEC60079C437 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		87D1A1EE290463E90079C437 /* CheckToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckToggleStyle.swift; sourceTree = "<group>"; };
+		87D1A1F0290469700079C437 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		87D573502901B964003FC8B4 /* SimpleToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleToggleView.swift; sourceTree = "<group>"; };
-		87D573522901C2A3003FC8B4 /* TitleToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleToggle.swift; sourceTree = "<group>"; };
+		87D573522901C2A3003FC8B4 /* VerticalTitleToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTitleToggle.swift; sourceTree = "<group>"; };
 		87D573572901CA2D003FC8B4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		87DAA36728FEE5B700E305E3 /* Homely.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homely.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DAA36A28FEE5B700E305E3 /* HomelyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomelyApp.swift; sourceTree = "<group>"; };
@@ -76,16 +90,53 @@
 		871C03242901DC87007DE240 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				87D573522901C2A3003FC8B4 /* TitleToggle.swift */,
-				877158632902B3EE00887794 /* IconToggle.swift */,
+				87D573522901C2A3003FC8B4 /* VerticalTitleToggle.swift */,
+				877158632902B3EE00887794 /* PowerToggleStyle.swift */,
+				87D1A1EE290463E90079C437 /* CheckToggleStyle.swift */,
 				871C03222901D7ED007DE240 /* ChooseButton.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
 		};
+		87D1A1E22902CE4E0079C437 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				87D573572901CA2D003FC8B4 /* HomeView.swift */,
+				87D1A1E32902CE650079C437 /* HomeViewModel.swift */,
+				87D1A1E72902CE900079C437 /* Widgets */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		87D1A1E52902CE6A0079C437 /* Family */ = {
+			isa = PBXGroup;
+			children = (
+				87DAA38228FEE74000E305E3 /* FamilyView.swift */,
+			);
+			path = Family;
+			sourceTree = "<group>";
+		};
+		87D1A1E62902CE890079C437 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				87DAA38428FEE75300E305E3 /* PersonView.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		87D1A1E72902CE900079C437 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				87D1A1F0290469700079C437 /* WeatherView.swift */,
+				875C4B482907E5300059402A /* LightView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		87D5734F2901B93C003FC8B4 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
+				87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */,
 				87D573502901B964003FC8B4 /* SimpleToggleView.swift */,
 				871C03242901DC87007DE240 /* Elements */,
 			);
@@ -133,9 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				87DAA37928FEE5DA00E305E3 /* Main */,
-				87D573572901CA2D003FC8B4 /* HomeView.swift */,
-				87DAA38228FEE74000E305E3 /* FamilyView.swift */,
-				87DAA38428FEE75300E305E3 /* PersonView.swift */,
+				87D1A1E22902CE4E0079C437 /* Home */,
+				87D1A1E52902CE6A0079C437 /* Family */,
+				87D1A1E62902CE890079C437 /* Person */,
 				87D5734F2901B93C003FC8B4 /* Common Views */,
 			);
 			path = Views;
@@ -153,6 +204,8 @@
 		87DAA38628FEEB7100E305E3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				87D1A1EC2902FEC60079C437 /* HexColor.swift */,
+				875C4B4A2907E7AA0059402A /* CommonSize.swift */,
 				87DAA38728FEEB8300E305E3 /* Color + Extension.swift */,
 				87DAA39E28FF000000E305E3 /* Font + Extension.swift */,
 				871C03202901D42D007DE240 /* Image + Extension.swift */,
@@ -264,18 +317,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				875C4B4B2907E7AA0059402A /* CommonSize.swift in Sources */,
 				87DAA39F28FF000000E305E3 /* Font + Extension.swift in Sources */,
 				87DAA38328FEE74000E305E3 /* FamilyView.swift in Sources */,
 				87DAA38828FEEB8300E305E3 /* Color + Extension.swift in Sources */,
+				87D1A1EB2902DB340079C437 /* IconTitleToggleView.swift in Sources */,
 				871C03212901D42D007DE240 /* Image + Extension.swift in Sources */,
 				87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */,
 				87DAA37D28FEE69300E305E3 /* CustomTabBar.swift in Sources */,
+				87D1A1EF290463E90079C437 /* CheckToggleStyle.swift in Sources */,
 				87DAA38528FEE75300E305E3 /* PersonView.swift in Sources */,
-				877158642902B3EE00887794 /* IconToggle.swift in Sources */,
+				877158642902B3EE00887794 /* PowerToggleStyle.swift in Sources */,
 				87D573512901B964003FC8B4 /* SimpleToggleView.swift in Sources */,
+				87D1A1E42902CE650079C437 /* HomeViewModel.swift in Sources */,
 				87DAA37B28FEE5E800E305E3 /* MainView.swift in Sources */,
-				87D573532901C2A3003FC8B4 /* TitleToggle.swift in Sources */,
+				87D573532901C2A3003FC8B4 /* VerticalTitleToggle.swift in Sources */,
+				87D1A1ED2902FEC60079C437 /* HexColor.swift in Sources */,
+				87D1A1F1290469700079C437 /* WeatherView.swift in Sources */,
 				87DAA36B28FEE5B700E305E3 /* HomelyApp.swift in Sources */,
+				875C4B492907E5300059402A /* LightView.swift in Sources */,
 				871C03232901D7ED007DE240 /* ChooseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

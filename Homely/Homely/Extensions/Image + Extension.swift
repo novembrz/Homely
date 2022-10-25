@@ -19,7 +19,7 @@ extension Image {
         }
         
         static func sun() -> Image {
-            return Image("sun")
+            return Image("sun_Illustration")
         }
         
         static func lightOn() -> Image {
@@ -64,6 +64,10 @@ extension Image {
             return Image("livingRoom")
         }
         
+        static func moon() -> Image {
+            return Image("moon")
+        }
+        
         static func on() -> Image {
             return Image("on")
         }
@@ -78,6 +82,10 @@ extension Image {
         
         static func subwoofer() -> Image {
             return Image("subwoofer")
+        }
+        
+        static func sun() -> Image {
+            return Image("sun")
         }
         
         static func tableware() -> Image {
