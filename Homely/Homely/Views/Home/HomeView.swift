@@ -13,19 +13,19 @@ struct HomeView: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-            VStack(spacing: .CommonSize.spacing) {
+            VStack(spacing: .Constants.spacing) {
                 firstRow
             }
-            .padding(.horizontal, .CommonSize.spacing)
+            .padding(.horizontal, .Constants.spacing)
         }
     }
 
     var firstRow: some View {
-        HStack(spacing: .CommonSize.spacing) {
-            VStack(spacing: .CommonSize.spacing) {
+        HStack(spacing: .Constants.spacing) {
+            VStack(spacing: .Constants.spacing) {
                 WeatherView()
                 
-                HStack(spacing: .CommonSize.spacing) {
+                HStack(spacing: .Constants.spacing) {
                     IconTitleToggleView(
                         title: .conditioner,
                         icon: .Icon.fan(),

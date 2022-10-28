@@ -30,7 +30,7 @@ struct LightView: View {
             .padding(.padding)
             .frame(width: .width, height: .heigth, alignment: .leading)
             .background(Color.backgroundColor())
-            .cornerRadius(.CommonSize.cornerRadius)
+            .cornerRadius(.Constants.cornerRadius)
             
             icon
                 .resizable()

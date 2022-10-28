@@ -31,10 +31,10 @@ struct WeatherView: View {
             .padding(.horizontal, .horizontalPadding)
             .frame(height: .heigth)
             .background(Color.backgroundColor())
-            .cornerRadius(.CommonSize.cornerRadius)
+            .cornerRadius(.Constants.cornerRadius)
             
             Image.Illustration.sun()
-                .cornerRadius(.CommonSize.cornerRadius)
+                .cornerRadius(.Constants.cornerRadius)
         }
     }
     

@@ -28,7 +28,7 @@ struct ChooseButton: View {
                     .foregroundColor(startAction ? .white : .textColor())
                     .padding(.padding)
                     .background(startAction ? tint : Color.backgroundColor())
-                    .cornerRadius(.CommonSize.cornerRadius)
+                    .cornerRadius(.Constants.cornerRadius)
                 
                 if startAction {
                     Image.shadow()

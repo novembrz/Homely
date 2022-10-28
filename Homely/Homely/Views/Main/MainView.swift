@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State private var selectedTab: Tab = .home
+    @State var showMenu = false
     
     private var navigationTitle: String {
         switch selectedTab {
