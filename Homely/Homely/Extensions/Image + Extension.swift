@@ -9,6 +9,10 @@ import SwiftUI
 
 extension Image {
     
+    static func getImage(_ name: String) -> Image {
+        return Image(name)
+    }
+    
     static func shadow() -> Image {
         return Image("shadow")
     }

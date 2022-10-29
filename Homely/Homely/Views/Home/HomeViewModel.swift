@@ -10,6 +10,16 @@ import SwiftUI
 extension HomeView {
     @MainActor class HomeViewModel: ObservableObject {
         
+        var securityСameras: [SecurityСamera] = [
+            SecurityСamera(roomName: "Вход", icon: "door", isOn: true),
+            SecurityСamera(roomName: "Кухня", icon: "tableware", isOn: false),
+            SecurityСamera(roomName: "Гостинная", icon: "livingRoom", isOn: false),
+            SecurityСamera(roomName: "Спальня", icon: "bed", isOn: false),
+            SecurityСamera(roomName: "Детская 1", icon: "teddyBear", isOn: false),
+            SecurityСamera(roomName: "Детская 2", icon: "rattle", isOn: true),
+            SecurityСamera(roomName: "Гараж", icon: "garage", isOn: false)
+        ]
+        
         // возможно тоже common
         func conditionerAction(_ isOn: Bool) {
             
@@ -17,6 +27,10 @@ extension HomeView {
         
         // Common
         func presentView() {
+            
+        }
+        
+        func securityСamerasAction(_ isOn: Bool, camera: SecurityСamera) {
             
         }
     }

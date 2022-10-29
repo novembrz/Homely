@@ -27,9 +27,10 @@ struct LightView: View {
                         completion(isOn)
                     }
             }
-            .padding(.padding)
+            .padding(.vertical, .verticalPadding)
+            .padding(.horizontal, .horizontalPadding)
             .frame(width: .width, height: .heigth, alignment: .leading)
-            .background(Color.backgroundColor())
+            .background(Color.elementColor())
             .cornerRadius(.Constants.cornerRadius)
             
             icon
@@ -49,7 +50,8 @@ private extension String {
 private extension CGFloat {
     static var imageSize: CGFloat = 92
     static var textSize: CGFloat = 14
-    static var padding: CGFloat = 14
+    static var verticalPadding: CGFloat = 14
+    static var horizontalPadding: CGFloat = 10
     static var width: CGFloat = 133
     static var heigth: CGFloat = 242
 }

@@ -25,7 +25,7 @@ struct ChooseButton: View {
                 icon
                     .resizable()
                     .frame(width: .iconSize, height: .iconSize)
-                    .foregroundColor(startAction ? .white : .textColor())
+                    .foregroundColor(startAction ? .white : .secondTextColor())
                     .padding(.padding)
                     .background(startAction ? tint : Color.backgroundColor())
                     .cornerRadius(.Constants.cornerRadius)

@@ -24,7 +24,7 @@ struct SimpleToggleView: View {
             .tint(tint)
         }
         .padding(.padding)
-        .background(Color.backgroundColor())
+        .background(Color.elementColor())
         .cornerRadius(.Constants.cornerRadius)
         .onChange(of: startAction) { newValue in
             completion(startAction)

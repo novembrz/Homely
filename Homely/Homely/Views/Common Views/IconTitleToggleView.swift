@@ -37,7 +37,7 @@ struct IconTitleToggleView: View {
         .padding(.vertical, .verticalPadding)
         .padding(.horizontal, .horizontalPadding)
         .frame(minWidth: .minWidth, maxWidth: .maxWidth, alignment: .leading)
-        .background(Color.backgroundColor())
+        .background(Color.elementColor())
         .cornerRadius(.Constants.cornerRadius)
         .onChange(of: startAction) { newValue in
             completion(startAction)

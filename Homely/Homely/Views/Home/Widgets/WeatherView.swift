@@ -30,7 +30,7 @@ struct WeatherView: View {
             .padding(.vertical, .verticalPadding)
             .padding(.horizontal, .horizontalPadding)
             .frame(height: .heigth)
-            .background(Color.backgroundColor())
+            .background(Color.elementColor())
             .cornerRadius(.Constants.cornerRadius)
             
             Image.Illustration.sun()

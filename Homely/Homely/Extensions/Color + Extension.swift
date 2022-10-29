@@ -35,4 +35,8 @@ extension Color {
     static func textColor() -> Color {
         return Color("TextColor")
     }
+    
+    static func secondTextColor() -> Color {
+        return Color("SecondTextColor")
+    }
 }

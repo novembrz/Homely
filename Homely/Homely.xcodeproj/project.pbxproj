@@ -15,6 +15,7 @@
 		87C091CE290C84E900CB757C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091CD290C84E900CB757C /* MainViewModel.swift */; };
 		87C091D1290C879400CB757C /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091D0290C879400CB757C /* View + Extension.swift */; };
 		87C091D5290D115C00CB757C /* NavigationBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091D4290D115C00CB757C /* NavigationBlock.swift */; };
+		87C091D8290D171300CB757C /* SecurityСamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091D7290D171300CB757C /* SecurityСamera.swift */; };
 		87D1A1E42902CE650079C437 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1E32902CE650079C437 /* HomeViewModel.swift */; };
 		87D1A1EB2902DB340079C437 /* IconTitleToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */; };
 		87D1A1ED2902FEC60079C437 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EC2902FEC60079C437 /* HexColor.swift */; };
@@ -53,6 +54,7 @@
 		87C091CD290C84E900CB757C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		87C091D0290C879400CB757C /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		87C091D4290D115C00CB757C /* NavigationBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBlock.swift; sourceTree = "<group>"; };
+		87C091D7290D171300CB757C /* SecurityСamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecurityСamera.swift"; sourceTree = "<group>"; };
 		87D1A1E32902CE650079C437 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleToggleView.swift; sourceTree = "<group>"; };
 		87D1A1EC2902FEC60079C437 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 				87C091CD290C84E900CB757C /* MainViewModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		87C091D6290D170700CB757C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87C091D7290D171300CB757C /* SecurityСamera.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		87D1A1E22902CE4E0079C437 /* Home */ = {
@@ -182,6 +192,7 @@
 			children = (
 				87DAA39D28FEFF1E00E305E3 /* Info.plist */,
 				87DAA36A28FEE5B700E305E3 /* HomelyApp.swift */,
+				87C091D6290D170700CB757C /* Models */,
 				87DAA37828FEE5D100E305E3 /* Views */,
 				87DAA38628FEEB7100E305E3 /* Extensions */,
 				87DAA38928FEEE3600E305E3 /* Supporting files */,
@@ -340,6 +351,7 @@
 				875C4B4B2907E7AA0059402A /* Constants.swift in Sources */,
 				87DAA39F28FF000000E305E3 /* Font + Extension.swift in Sources */,
 				87DAA38328FEE74000E305E3 /* FamilyView.swift in Sources */,
+				87C091D8290D171300CB757C /* SecurityСamera.swift in Sources */,
 				87C091D5290D115C00CB757C /* NavigationBlock.swift in Sources */,
 				87DAA38828FEEB8300E305E3 /* Color + Extension.swift in Sources */,
 				87C091D1290C879400CB757C /* View + Extension.swift in Sources */,
