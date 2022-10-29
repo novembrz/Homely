@@ -12,11 +12,10 @@ struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
+        NavigationBlock(title: .home) {
             VStack(spacing: .Constants.spacing) {
                 firstRow
             }
-            .padding(.horizontal, .Constants.spacing)
         }
     }
 
@@ -52,6 +51,7 @@ struct HomeView: View {
 //MARK: - Extensions
 
 private extension String {
+    static var home = "Дом"
     static var conditioner = "Кондиционер"
     static var humidifier = "Увлажнитель"
 }

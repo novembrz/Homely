@@ -11,8 +11,7 @@ import SwiftUI
 struct HomelyApp: App {
     var body: some Scene {
         WindowGroup {
-            //MainView()
-            BaseView()
+            MainView()
         }
     }
 }

@@ -8,9 +8,23 @@
 import SwiftUI
 
 struct FamilyView: View {
+    
     var body: some View {
-        Text("FamilyView")
+        NavigationBlock(title: .family) {
+            VStack(spacing: .Constants.spacing) {
+                HStack {
+                    Text("FamilyView")
+                    Spacer()
+                }
+            }
+        }
     }
+}
+
+//MARK: - Extensions
+
+private extension String {
+    static var family = "Семья"
 }
 
 //MARK: - Previews

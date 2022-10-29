@@ -13,28 +13,37 @@ struct PersonView: View {
     @Environment(\.horizontalSizeClass) var widthSizeClass: UserInterfaceSizeClass?
     
     var body: some View {
-        if heightSizeClass == .regular {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    content
-                }
-                .padding(16)
+        NavigationBlock(title: .person) {
+            VStack(spacing: .Constants.spacing) {
+                content
             }
-        } else if heightSizeClass == .compact {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    content
-                }
-                .padding(.bottom, 45)
-                .padding(16)
-            }
-        } else {
-            Text("Unknown")
         }
-          
     }
     
     var content: some View {
+        Group {
+            if heightSizeClass == .regular {
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        blocks
+                    }
+                    .padding(16)
+                }
+            } else if heightSizeClass == .compact {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        blocks
+                    }
+                    .padding(.bottom, 45)
+                    .padding(16)
+                }
+            } else {
+                Text("Unknown")
+            }
+        }
+    }
+    
+    var blocks: some View {
         Group {
             first
             first
@@ -58,6 +67,12 @@ struct PersonView: View {
                 .frame(height: heightSizeClass == .compact ? nil : 242)
         }
     }
+}
+
+//MARK: - Extensions
+
+private extension String {
+    static var person = "Личное"
 }
 
 //MARK: - Previews
