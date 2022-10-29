@@ -58,6 +58,8 @@ struct CustomTabBar: View {
     }
 }
 
+//MARK: - Previews
+
 struct CustomTabBar_Previews: PreviewProvider {
     static var previews: some View {
         MainView()

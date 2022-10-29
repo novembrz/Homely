@@ -21,7 +21,7 @@ struct BaseView: View {
     }
     
     var body: some View {
-        let sideBarWidth: CGFloat = getRect().width - 90
+        let sideBarWidth = BaseView.getRect().width - 90
         
         NavigationView {
             HStack(spacing: 0) {
@@ -44,7 +44,7 @@ struct BaseView: View {
                         //customtabbar
                     }
                 }
-                .frame(width: getRect().width)
+                .frame(width: BaseView.getRect().width)
                 .overlay(
                     Rectangle()
                         .fill(
@@ -58,7 +58,7 @@ struct BaseView: View {
                         }
                 )
             }
-            .frame(width: getRect().width + sideBarWidth)
+            .frame(width: BaseView.getRect().width + sideBarWidth)
             //MARK: HERE
             .offset(x: -sideBarWidth / 2)
             .offset(x: offset > 0 ? offset : 0)
@@ -91,7 +91,7 @@ struct BaseView: View {
     }
     
     func onEnded(value: DragGesture.Value) {
-        let sideBarWidth: CGFloat = getRect().width - 90
+        let sideBarWidth: CGFloat = BaseView.getRect().width - 90
         let transition = value.translation.width
         
         withAnimation {
@@ -123,8 +123,11 @@ struct BaseView: View {
     }
     
     func onChange() {
-        let sideBarWidth: CGFloat = getRect().width - 90
-        offset = (gestureOffset != 0) ? (gestureOffset + lastStoredOffset < sideBarWidth ? gestureOffset + lastStoredOffset : offset) : offset
+        let sideBarWidth: CGFloat = BaseView.getRect().width - 90
+        let currentOffset = gestureOffset + lastStoredOffset
+//        offset = (gestureOffset != 0) ? (gestureOffset + lastStoredOffset < sideBarWidth ? gestureOffset + lastStoredOffset : offset) : offset
+        
+        offset = (gestureOffset != 0 && currentOffset < sideBarWidth) ? currentOffset : offset
     }
 }
 

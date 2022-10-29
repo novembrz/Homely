@@ -10,7 +10,7 @@ import SwiftUI
 struct SideMenuView: View {
     
     @Binding var showMenu: Bool
-     var menuTabs: [MenuTab] = [.accounts, .purchased, .settings, .information]
+    var menuTabs: [MenuTab] = [.accounts, .purchased, .settings, .information]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 60) {
@@ -20,7 +20,7 @@ struct SideMenuView: View {
             chat
         }
         .padding(16)
-        .frame(width: getRect().width - 90, alignment: .leading)
+        .frame(width: SideMenuView.getRect().width - 90, alignment: .leading)
         .frame(maxHeight: .infinity)
         .background(
             Color.primary
@@ -107,11 +107,5 @@ struct SideMenuView: View {
 struct SideMenuView_Previews: PreviewProvider {
     static var previews: some View {
         BaseView()
-    }
-}
-
-extension View {
-    func getRect() -> CGRect {
-        return UIScreen.main.bounds
     }
 }

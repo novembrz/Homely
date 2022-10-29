@@ -13,6 +13,8 @@
 		875C4B4B2907E7AA0059402A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C4B4A2907E7AA0059402A /* Constants.swift */; };
 		877158642902B3EE00887794 /* PowerToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877158632902B3EE00887794 /* PowerToggleStyle.swift */; };
 		87C091CC290C3CD700CB757C /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091CB290C3CD700CB757C /* BaseView.swift */; };
+		87C091CE290C84E900CB757C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091CD290C84E900CB757C /* MainViewModel.swift */; };
+		87C091D1290C879400CB757C /* View + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C091D0290C879400CB757C /* View + Extension.swift */; };
 		87D1A1E42902CE650079C437 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1E32902CE650079C437 /* HomeViewModel.swift */; };
 		87D1A1EB2902DB340079C437 /* IconTitleToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */; };
 		87D1A1ED2902FEC60079C437 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1A1EC2902FEC60079C437 /* HexColor.swift */; };
@@ -49,6 +51,8 @@
 		875C4B4A2907E7AA0059402A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		877158632902B3EE00887794 /* PowerToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerToggleStyle.swift; sourceTree = "<group>"; };
 		87C091CB290C3CD700CB757C /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		87C091CD290C84E900CB757C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		87C091D0290C879400CB757C /* View + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
 		87D1A1E32902CE650079C437 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		87D1A1EA2902DB340079C437 /* IconTitleToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTitleToggleView.swift; sourceTree = "<group>"; };
 		87D1A1EC2902FEC60079C437 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 				871C03222901D7ED007DE240 /* ChooseButton.swift */,
 			);
 			path = Elements;
+			sourceTree = "<group>";
+		};
+		87C091CF290C86E000CB757C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				87DAA37A28FEE5E700E305E3 /* MainView.swift */,
+				87C091CD290C84E900CB757C /* MainViewModel.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		87D1A1E22902CE4E0079C437 /* Home */ = {
@@ -199,7 +212,7 @@
 		87DAA37928FEE5DA00E305E3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				87DAA37A28FEE5E700E305E3 /* MainView.swift */,
+				87C091CF290C86E000CB757C /* Main */,
 				87DAA37C28FEE69300E305E3 /* CustomTabBar.swift */,
 				87C091CB290C3CD700CB757C /* BaseView.swift */,
 				87FB1135290BEC2A0074D888 /* SideMenuView.swift */,
@@ -215,6 +228,7 @@
 				87DAA38728FEEB8300E305E3 /* Color + Extension.swift */,
 				87DAA39E28FF000000E305E3 /* Font + Extension.swift */,
 				871C03202901D42D007DE240 /* Image + Extension.swift */,
+				87C091D0290C879400CB757C /* View + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,6 +341,7 @@
 				87DAA39F28FF000000E305E3 /* Font + Extension.swift in Sources */,
 				87DAA38328FEE74000E305E3 /* FamilyView.swift in Sources */,
 				87DAA38828FEEB8300E305E3 /* Color + Extension.swift in Sources */,
+				87C091D1290C879400CB757C /* View + Extension.swift in Sources */,
 				87D1A1EB2902DB340079C437 /* IconTitleToggleView.swift in Sources */,
 				871C03212901D42D007DE240 /* Image + Extension.swift in Sources */,
 				87D573582901CA2D003FC8B4 /* HomeView.swift in Sources */,
@@ -344,6 +359,7 @@
 				87D1A1F1290469700079C437 /* WeatherView.swift in Sources */,
 				87DAA36B28FEE5B700E305E3 /* HomelyApp.swift in Sources */,
 				875C4B492907E5300059402A /* LightView.swift in Sources */,
+				87C091CE290C84E900CB757C /* MainViewModel.swift in Sources */,
 				871C03232901D7ED007DE240 /* ChooseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
