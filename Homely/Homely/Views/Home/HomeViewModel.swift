@@ -20,6 +20,10 @@ extension HomeView {
             SecurityСamera(roomName: "Гараж", icon: "garage", isOn: false)
         ]
         
+        let audioBatteryCharge = 86
+        let gamepadBatteryCharge = 53
+        
+        
         // возможно тоже common
         func conditionerAction(_ isOn: Bool) {
             
@@ -30,8 +34,8 @@ extension HomeView {
             
         }
         
-        func securityСamerasAction(_ isOn: Bool, camera: SecurityСamera) {
-            
+        func getBatteryChargeLevel(_ percent: Int) -> CGFloat {
+            return CGFloat(percent)/100
         }
     }
 }
