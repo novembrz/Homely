@@ -7,21 +7,39 @@
 
 import SwiftUI
 
-extension Font {
+public struct ThemedFont: ViewModifier {
     
-    static func light(_ size: CGFloat) -> Font {
-        return Font.custom("Montserrat-Light", size: size)
+    enum ThemeFont: String {
+        case bold = "Montserrat-Bold"
+        case medium = "Montserrat-Medium"
+        case regular = "Montserrat-Regular"
+        case light = "Montserrat-Light"
     }
     
-    static func regular(_ size: CGFloat) -> Font {
-        return Font.custom("Montserrat-Regular", size: size)
+    var size: CGFloat
+    var font: ThemeFont = .regular
+    
+    public func body(content: Content) -> some View {
+        content
+            .font(Font(UIFont(name: font.rawValue, size: size)!))
+    }
+}
+
+extension View {
+    
+    public func bold(_ size: CGFloat) -> some View {
+        self.modifier(ThemedFont(size: size, font: .bold))
     }
     
-    static func medium(_ size: CGFloat) -> Font {
-        return Font.custom("Montserrat-Medium", size: size)
+    public func medium(_ size: CGFloat) -> some View {
+        self.modifier(ThemedFont(size: size, font: .medium))
     }
     
-    static func bold(_ size: CGFloat) -> Font {
-        return Font.custom("Montserrat-Bold", size: size)
+    public func regular(_ size: CGFloat) -> some View {
+        self.modifier(ThemedFont(size: size, font: .regular))
+    }
+    
+    public func light(_ size: CGFloat) -> some View {
+        self.modifier(ThemedFont(size: size, font: .light))
     }
 }

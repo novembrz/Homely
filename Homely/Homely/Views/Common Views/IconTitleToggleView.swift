@@ -23,16 +23,7 @@ struct IconTitleToggleView: View {
             
             Spacer()
             
-            VStack(alignment: .leading, spacing: .spacing) {
-                icon
-                    .resizable()
-                    .frame(width: .iconSize, height: .iconSize)
-                    .foregroundColor(.textColor())
-                
-                Text(title)
-                    .font(.regular(.textSize))
-                    .foregroundColor(.textColor())
-            }
+            IconTitleView(title: title, icon: icon)
         }
         .padding(.vertical, .verticalPadding)
         .padding(.horizontal, .horizontalPadding)
@@ -48,13 +39,10 @@ struct IconTitleToggleView: View {
 //MARK: - Extension
 
 private extension CGFloat {
-    static var iconSize: CGFloat = 24
     static var minWidth: CGFloat = 97
     static var maxWidth: CGFloat = 124
-    static var spacing: CGFloat = 6
     static var verticalPadding: CGFloat = 15
     static var horizontalPadding: CGFloat = 8
-    static var textSize: CGFloat = 12
 }
 
 //MARK: - Previews

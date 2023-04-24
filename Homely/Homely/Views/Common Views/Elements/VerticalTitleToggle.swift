@@ -18,7 +18,7 @@ struct VerticalTitleToggle: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(title)
-                .font(.regular(textSize))
+                .regular(textSize)
                 .foregroundColor(.textColor())
 
             Toggle("", isOn: $startAction)

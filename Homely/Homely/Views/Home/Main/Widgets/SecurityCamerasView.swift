@@ -13,7 +13,7 @@ struct SecurityCamerasView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
             Text(String.securityCameras)
-                .font(.regular(15))
+                .regular(15)
                 .foregroundColor(.textColor())
             
             ScrollView(.horizontal, showsIndicators: false) {

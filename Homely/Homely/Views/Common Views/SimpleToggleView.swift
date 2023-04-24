@@ -18,7 +18,7 @@ struct SimpleToggleView: View {
         VStack {
             Toggle(isOn: $startAction) {
                 Text(title)
-                    .font(.regular(.textSize))
+                    .regular(.textSize)
                     .foregroundColor(.textColor())
             }
             .tint(tint)
@@ -36,7 +36,7 @@ struct SimpleToggleView: View {
 
 private extension CGFloat {
     static let padding: CGFloat = 10
-    static let textSize: CGFloat = 12
+    static let textSize: CGFloat = 14
 }
 
 //MARK: - Previews

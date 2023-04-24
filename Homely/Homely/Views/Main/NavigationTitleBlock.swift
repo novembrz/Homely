@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationBlock<Content: View>: View {
+struct NavigationTitleBlock<Content: View>: View {
     
     private var viewTitle: String
     private let content: Content
@@ -25,13 +25,14 @@ struct NavigationBlock<Content: View>: View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .leading, spacing: .stackSpacing) {
                 Text(viewTitle)
-                    .font(.bold(.textSize))
+                    .bold(.textSize)
                     .foregroundColor(.textColor())
                 
                 content
             }
             .padding(.horizontal, .Constants.spacing)
             .padding(.top, .topPadding)
+            .padding(.bottom, .bottomPadding)
         }
         .background(Color.backgroundColor())
         .navigationBarTitleDisplayMode(.inline)
@@ -44,7 +45,8 @@ struct NavigationBlock<Content: View>: View {
 private extension CGFloat {
     static var stackSpacing: CGFloat = 15
     static var textSize: CGFloat = 35
-    static var topPadding: CGFloat = 40
+    static var topPadding: CGFloat = 20
+    static var bottomPadding: CGFloat = 70
 }
 
 //MARK: - Previews

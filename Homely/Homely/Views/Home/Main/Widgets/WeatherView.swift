@@ -44,11 +44,11 @@ struct WeatherView: View {
     func inHomeInfoView(title: String, subtitle: String) -> some View {
         VStack(alignment: .leading, spacing: -2) {
             Text(title)
-                .font(.bold(.titleSize))
+                .bold(.titleSize)
                 .foregroundColor(.textColor())
             
             Text(subtitle)
-                .font(.regular(.subtitleSize))
+                .regular(.subtitleSize)
                 .foregroundColor(.textColor())
         }
     }
@@ -64,7 +64,7 @@ struct WeatherView: View {
                 .foregroundColor(.textColor())
             
             Text(temp)
-                .font(.bold(.wheaterTextSize))
+                .bold(.wheaterTextSize)
                 .foregroundColor(.textColor())
         }
     }

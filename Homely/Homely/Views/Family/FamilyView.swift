@@ -10,7 +10,7 @@ import SwiftUI
 struct FamilyView: View {
     
     var body: some View {
-        NavigationBlock(title: .family) {
+        NavigationTitleBlock(title: .family) {
             VStack(spacing: .Constants.spacing) {
                 HStack {
                     Text("FamilyView")

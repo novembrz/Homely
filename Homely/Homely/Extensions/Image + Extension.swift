@@ -51,6 +51,10 @@ extension Image {
         static func fan() -> Image {
             return Image("fan")
         }
+
+        static func freeze() -> Image {
+            return Image("freeze")
+        }
         
         static func gamepad() -> Image {
             return Image("gamepad")
@@ -62,6 +66,10 @@ extension Image {
         
         static func highway() -> Image {
             return Image("highway")
+        }
+
+        static func list() -> Image {
+            return Image("list")
         }
         
         static func livingRoom() -> Image {
@@ -78,6 +86,10 @@ extension Image {
         
         static func petrol() -> Image {
             return Image("petrol")
+        }
+
+        static func qr() -> Image {
+            return Image("qr")
         }
         
         static func rattle() -> Image {

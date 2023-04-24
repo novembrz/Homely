@@ -12,11 +12,15 @@ struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
-        NavigationBlock(title: .home) {
-            VStack(spacing: .Constants.spacing) {
-                firstBlock
-                SecurityCamerasView(cameras: viewModel.securityСameras)
-                secondBlock
+        CustomNavigationView {
+            NavigationTitleBlock(title: .home) {
+                VStack(spacing: .Constants.spacing) {
+                    firstBlock
+                    SecurityCamerasView(cameras: viewModel.securityСameras)
+                    secondBlock
+                    thirdBlock
+                    fourthBlock
+                }
             }
         }
     }
@@ -55,7 +59,7 @@ struct HomeView: View {
     //MARK: - secondBlock
 
     var secondBlock: some View {
-        HStack {
+        HStack(spacing: .Constants.spacing) {
             VerticalTitleToggle(
                 title: "Smart TV",
                 textSize: .textSize,
@@ -73,6 +77,63 @@ struct HomeView: View {
         }
     }
     
+    
+    //MARK: - thirdBlock
+
+    var thirdBlock: some View {
+        HStack(spacing: .Constants.spacing) {
+            Rectangle()
+                .frame(width: 198)
+            
+            otherViews
+        }
+    }
+    
+    
+    //MARK: - fourthBlock
+    
+    var fourthBlock: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    CustomNavigationLink {
+                        RectangleButton(
+                            icon: .Icon.qr(),
+                            buttonSize: .buttonSize,
+                            iconSize: .iconSize,
+                            bgColor: .backgroundColor()
+                        )
+                    } destination: {
+                        QRView()
+                    }
+                    
+                    RectangleButton(
+                        icon: .Icon.list(),
+                        buttonSize: .buttonSize,
+                        iconSize: .iconSize,
+                        bgColor: .backgroundColor()
+                    )
+                }
+                
+                Spacer()
+                
+                IconTitleView(title: .fridge, icon: .Icon.freeze())
+            }
+            .padding(.top, .topPadding)
+            .padding(.leading, .leadingPadding)
+            .padding(.trailing, .leadingPadding)
+            .padding(.bottom, .bottomPadding)
+            .frame(height: 140)
+            .background(Color.elementColor())
+            .cornerRadius(.Constants.cornerRadius)
+            
+            Spacer()
+        }
+    }
+
+    
+    //MARK: - Views
+
     var playStationSystem: some View {
         HStack {
             VerticalTitleToggle(
@@ -120,8 +181,24 @@ struct HomeView: View {
             }
             
             Text("\(percent)%")
-                .font(.medium(13))
+                .medium(13)
                 .foregroundColor(.textColor())
+        }
+    }
+    
+    var otherViews: some View {
+        VStack(spacing: .Constants.spacing) {
+            SimpleToggleView(title: .vacuumСleaner, tint: .homeColor()) { action in
+                
+            }
+            
+            SimpleToggleView(title: .sockets, tint: .homeColor()) { action in
+                
+            }
+            
+            SimpleToggleView(title: .curtains, tint: .homeColor()) { action in
+                
+            }
         }
     }
 }
@@ -133,6 +210,10 @@ private extension String {
     static var conditioner = "Кондиционер"
     static var humidifier = "Увлажнитель"
     static var securityCameras = "Камеры видеонаблюдения"
+    static var vacuumСleaner = "Пылесос"
+    static var sockets = "Розетки"
+    static var curtains = "Шторы"
+    static var fridge = "Холодильник"
 }
 
 private extension CGFloat {
@@ -144,6 +225,8 @@ private extension CGFloat {
     static var bottomPadding: CGFloat = 14
     static var circleSize: CGFloat = 41
     static var circleIconSize: CGFloat = 18
+    static var buttonSize: CGFloat = 40
+    static var iconSize: CGFloat = 23
 }
 
 //MARK: - Previews

@@ -38,11 +38,11 @@ struct SideMenuView: View {
             
             VStack(alignment: .leading, spacing: 5) {
                 Text("Дарья Курилова")
-                    .font(.bold(20))
+                    .bold(20)
                     .foregroundColor(.textColor())
                 
                 Text("kurilovadk@gmail.com")
-                    .font(.regular(14))
+                    .regular(14)
                     .foregroundColor(.textColor())
             }
         }
@@ -71,11 +71,11 @@ struct SideMenuView: View {
         Button {} label: {
             HStack(spacing: 15) {
                 Image(systemName: icon)
-                    .font(.medium(19))
+                    .medium(19)
                     .foregroundColor(.textColor())
                 
                 Text(text)
-                    .font(.medium(15))
+                    .medium(15)
                     .foregroundColor(.textColor())
             }
         }

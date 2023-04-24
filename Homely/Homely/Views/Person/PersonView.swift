@@ -13,7 +13,7 @@ struct PersonView: View {
     @Environment(\.horizontalSizeClass) var widthSizeClass: UserInterfaceSizeClass?
     
     var body: some View {
-        NavigationBlock(title: .person) {
+        NavigationTitleBlock(title: .person) {
             VStack(spacing: .Constants.spacing) {
                 content
             }
