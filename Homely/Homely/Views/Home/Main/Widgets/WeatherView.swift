@@ -22,8 +22,19 @@ struct WeatherView: View {
                     Spacer()
                     
                     HStack(spacing: .wheaterInfoSpacing) {
-                        wheaterInfoView(temp: "12°", icon: .Icon.sun())
-                        wheaterInfoView(temp: "5°", icon: .Icon.moon())
+                        HorizontalIconTitleView(
+                            text: "12°",
+                            icon: .Icon.sun(),
+                            iconSize: .iconSize,
+                            textSize: .wheaterTextSize
+                        )
+                        
+                        HorizontalIconTitleView(
+                            text: "5°",
+                            icon: .Icon.moon(),
+                            iconSize: .iconSize,
+                            textSize: .wheaterTextSize
+                        )
                     }
                 }
             }
@@ -52,22 +63,6 @@ struct WeatherView: View {
                 .foregroundColor(.textColor())
         }
     }
-    
-    //MARK: - infoView
-    
-    @ViewBuilder
-    func wheaterInfoView(temp: String, icon: Image) -> some View {
-        HStack(spacing: .wheaterItemSpacing) {
-            icon
-                .resizable()
-                .frame(width: .iconSize, height: .iconSize)
-                .foregroundColor(.textColor())
-            
-            Text(temp)
-                .bold(.wheaterTextSize)
-                .foregroundColor(.textColor())
-        }
-    }
 }
 
 //MARK: - Extensions
@@ -84,7 +79,6 @@ private extension CGFloat {
     static var heigth: CGFloat = 109
     static var inHomeInfoSpacing: CGFloat = 12
     static var wheaterInfoSpacing: CGFloat = 11
-    static var wheaterItemSpacing: CGFloat = 2
     static var iconSize: CGFloat = 13
     static var wheaterTextSize: CGFloat = 13
     static var titleSize: CGFloat = 18

@@ -8,13 +8,34 @@
 import SwiftUI
 
 struct RectangleButton: View {
-    var icon: Image
+    var icon: Image?
+    var imageName: String?
     var buttonSize: CGFloat
     var iconSize: CGFloat
     var bgColor: Color
     
+    //MARK: - Initialize
+    
+    public init(icon: Image, buttonSize: CGFloat, iconSize: CGFloat, bgColor: Color) {
+        self.icon = icon
+        self.imageName = nil
+        self.buttonSize = buttonSize
+        self.iconSize = iconSize
+        self.bgColor = bgColor
+    }
+    
+    public init(imageName: String, buttonSize: CGFloat, iconSize: CGFloat, bgColor: Color) {
+        self.icon = nil
+        self.imageName = imageName
+        self.buttonSize = buttonSize
+        self.iconSize = iconSize
+        self.bgColor = bgColor
+    }
+    
+    //MARK: - View
+    
     var body: some View {
-        icon
+        (icon == nil ? Image(systemName: imageName!) : icon!)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: iconSize, height: iconSize)

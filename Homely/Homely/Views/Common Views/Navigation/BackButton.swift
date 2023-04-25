@@ -19,8 +19,8 @@ struct BackButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 11)
                     .frame(width: 43, height: 43)
-                    .foregroundColor(.elementColor())
-                    .shadow(color: .gray.opacity(0.4), radius: 15, x: 2, y: 2)
+                    .foregroundColor(.white)
+                    .shadow(color: .black.opacity(0.25), radius: 15, x: 4, y: 4)
                 
                 Image(systemName: "chevron.left")
                     .foregroundColor(.textColor())

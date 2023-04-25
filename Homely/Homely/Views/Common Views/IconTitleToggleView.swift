@@ -23,7 +23,7 @@ struct IconTitleToggleView: View {
             
             Spacer()
             
-            IconTitleView(title: title, icon: icon)
+            VerticalIconTitleView(title: title, icon: icon)
         }
         .padding(.vertical, .verticalPadding)
         .padding(.horizontal, .horizontalPadding)

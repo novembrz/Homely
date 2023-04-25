@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IconTitleView: View {
+struct VerticalIconTitleView: View {
     var title: String
     var icon: Image
     
@@ -38,6 +38,6 @@ private extension CGFloat {
 
 struct IconTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        IconTitleView(title: "Кондиционер", icon: .Icon.fan())
+        VerticalIconTitleView(title: "Кондиционер", icon: .Icon.fan())
     }
 }

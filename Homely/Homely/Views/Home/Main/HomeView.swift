@@ -82,8 +82,9 @@ struct HomeView: View {
 
     var thirdBlock: some View {
         HStack(spacing: .Constants.spacing) {
-            Rectangle()
-                .frame(width: 198)
+            CarView(tint: .homeColor()) { isOn in
+                
+            }
             
             otherViews
         }
@@ -117,7 +118,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                IconTitleView(title: .fridge, icon: .Icon.freeze())
+                VerticalIconTitleView(title: .fridge, icon: .Icon.freeze())
             }
             .padding(.top, .topPadding)
             .padding(.leading, .leadingPadding)
