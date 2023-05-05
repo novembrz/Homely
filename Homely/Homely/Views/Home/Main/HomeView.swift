@@ -16,7 +16,7 @@ struct HomeView: View {
             NavigationTitleBlock(title: .home) {
                 VStack(spacing: .Constants.spacing) {
                     firstBlock
-                    SecurityCamerasView(cameras: viewModel.securityСameras)
+                    SecurityCamerasWidgetView(cameras: viewModel.securityСameras)
                     secondBlock
                     thirdBlock
                     fourthBlock

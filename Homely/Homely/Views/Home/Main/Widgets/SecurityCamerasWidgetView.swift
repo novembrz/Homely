@@ -7,17 +7,25 @@
 
 import SwiftUI
 
-struct SecurityCamerasView: View {
+struct SecurityCamerasWidgetView: View {
     var cameras: [SecurityСamera]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 11) {
+        CustomNavigationLink {
+            widget
+        } destination: {
+            SecurityView()
+        }
+    }
+
+    var widget: some View {
+        VStack(alignment: .leading, spacing: .spacing) {
             Text(String.securityCameras)
-                .regular(15)
+                .regular(.textSize)
                 .foregroundColor(.textColor())
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 11) {
+                HStack(spacing: .spacing) {
                     ForEach(cameras, id: \.self) { camera in
                         ChooseButton(icon: .getImage(camera.icon),
                                      tint: .homeColor()) { isActive in
@@ -29,7 +37,7 @@ struct SecurityCamerasView: View {
                 Spacer()
             }
         }
-        .padding(14)
+        .padding(.padding)
         .background(Color.elementColor())
         .cornerRadius(.Constants.cornerRadius)
     }
@@ -39,4 +47,10 @@ struct SecurityCamerasView: View {
 
 private extension String {
     static let securityCameras = "Камеры видеонаблюдения"
+}
+
+private extension CGFloat {
+    static let spacing: CGFloat = 11
+    static let textSize: CGFloat = 15
+    static let padding: CGFloat = 14
 }

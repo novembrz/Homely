@@ -62,7 +62,10 @@ struct CarView: View {
                     }
                 }
             }
-            .padding(14)
+            .padding(.leading, 10)
+            .padding(.vertical, 14)
+            .padding(.trailing, 14)
+            
         }
         .frame(width: 198)
        
